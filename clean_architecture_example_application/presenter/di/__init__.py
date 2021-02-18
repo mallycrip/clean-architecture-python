@@ -1,0 +1,3 @@
+from clean_architecture_example_application.presenter.controller.usecase_executor_impl import UseCaseExecutorImpl
+
+usecase_executor = UseCaseExecutorImpl()

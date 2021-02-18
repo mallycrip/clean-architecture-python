@@ -1,0 +1,5 @@
+from clean_architecture_example_application.presenter.controller.mock_controller import MockController
+from clean_architecture_example_application.presenter.di import usecase_executor
+from clean_architecture_example_application.presenter.di.usecases import create_user_usecase
+
+mock_controller_object = MockController(usecase_executor=usecase_executor, usecase=create_user_usecase)

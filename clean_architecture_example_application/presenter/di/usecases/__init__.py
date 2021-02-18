@@ -1,0 +1,4 @@
+from clean_architecture_example_application.core.usecases.user.create_user_usecase import CreateUserUseCase
+from clean_architecture_example_application.presenter.di.usecases.repository import user_repository
+
+create_user_usecase = CreateUserUseCase(user_repository=user_repository)
