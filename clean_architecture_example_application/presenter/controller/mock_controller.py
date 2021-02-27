@@ -11,8 +11,6 @@ class MockController:
         self.usecase: UseCase = usecase
 
     def post(self, header, body):
-        input = CreateUserUseCase.InputValues()
-        input.id = body.id
-        input.pw = body.pw
+        input = CreateUserUseCase.InputValues(body.id, body.pw, body.name, body.age, body.job)
 
         return self.usecase_executor.execute(self.usecase, input, MockMapper())
